@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- SETTING THE CHARACTER SET -->
     <meta charset="UTF-8">
-    <!-- SETTING THE CONTENT OF THE PAGE TO BE RESPONSIVE TO DEVICE WIDTH (MOBILE FIRST) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- SETUP META DATA FOR THIS PAGE -->
     <meta name="keywords" content="WEDDING,PLANNER,PLAN,ASSIGNMENT,">
     <meta name="author" content="Elite Events Chicago">
     <title>Elite Events Chicago</title>
-    <!-- INCLUDE OUR CSS STYLE SHEETS, USING W3 CSS, GOOGLE APIS AND FONTAWESOME -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Lobster|Satisfy|Courgette">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylistic.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
     <!--NAVBAR-->
@@ -56,7 +49,7 @@
         </div>
     </div>
 
-    <!-- Container (About Section) -->
+    <!-- About Section -->
     <div class="w3-content w3-container w3-padding-64" id="about">
         <h3 class="w3-center font-courgette">Luxury Wedding & Event Planners in Chicago</h3>
         <p class="w3-center"><em>ABOUT US</em></p>
@@ -65,126 +58,83 @@
             <div class="w3-col m6 w3-center w3-padding-large">
                 <img src="img/work_1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Founder" width="500" height="333">
             </div>
-            <!-- Hide this text on small devices -->
             <div class="w3-col m6 w3-hide-small w3-padding-large">
-                <p><br><br><br>Welcome to Elite Events Chicago. We are renowned for the creativity of our events as well as our extreme attention to detail, even for very large and complex events. We aspire to make all our clients feel as if they are our only client. Clients select us because our event planning approach and our commercial model are different from most of our competitors. With years of event planning experience as bespoke event and wedding designers, we create unique, luxury parties tailored perfectly to your personal style. Elite Events Chicago prides itself on world-class service, deep event planning experience, and the stunning events we create. Our team of experienced event planners and creative designers work alongside clients to create unique experiences.</p>
+                <p>Welcome to Elite Events Chicago. We are renowned for the creativity of our events as well as our extreme attention to detail. Our clients select us because our approach is different from most of our competitors, and we pride ourselves on world-class service and stunning events.</p>
             </div>
         </div>
-        <p class="w3-large w3-center w3-padding-16">Have a look at our stats from our customers:</p>
-        <p class="w3-wide"><i class="fa fa-diamond"></i>Creativity </p>
+        <p class="w3-large w3-center w3-padding-16">Our stats from customers:</p>
+        <p class="w3-wide"><i class="fa fa-diamond"></i> Creativity </p>
         <div class="w3-light-grey">
             <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
         </div>
-        <p class="w3-wide"><i class="fa fa-cutlery"></i>Catering</p>
+        <p class="w3-wide"><i class="fa fa-cutlery"></i> Catering</p>
         <div class="w3-light-grey">
             <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
         </div>
-        <p class="w3-wide"><i class="fa fa-child"></i>Entertainment</p>
+        <p class="w3-wide"><i class="fa fa-child"></i> Entertainment</p>
         <div class="w3-light-grey">
             <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
         </div>
     </div>
 
-    <!-- Second Parallax Image with Our Work Text -->
+    <!-- Our Work Section -->
     <div class="bgimg-2 w3-display-container w3-opacity-min">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">Our Work</span>
         </div>
     </div>
-
-    <!-- Container (Work Section) -->
     <div class="w3-content w3-container w3-padding-64" id="work">
         <h3 class="w3-center">OUR WORK</h3>
-        <p class="w3-center"><em>Here are some pictures captured during our weddings.<br> Click on the images to get the full experience</em></p><br>
-
-        <!-- Responsive Grid of images -->
+        <p class="w3-center"><em>RECENT PROJECTS</em></p>
+        <p class="w3-center">Here are a few examples of our recent work:</p>
         <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-                <img src="img/work_1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="You'll have memories to last with us">
+            <div class="w3-col m4">
+                <img src="img/work_1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="openModal(this);" alt="Work 1" width="600" height="400">
             </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Satisfied clients on their special day">
+            <div class="w3-col m4">
+                <img src="img/work_2.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="openModal(this);" alt="Work 2" width="600" height="400">
             </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Clients love our work">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Stunning settings for weddings">
+            <div class="w3-col m4">
+                <img src="img/work_3.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="openModal(this);" alt="Work 3" width="600" height="400">
             </div>
         </div>
-
         <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-                <img src="img/work_5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Unique decorations tailored to our clients">
+            <div class="w3-col m4">
+                <img src="img/work_4.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="openModal(this);" alt="Work 4" width="600" height="400">
             </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We pay attention to all the details">
+            <div class="w3-col m4">
+                <img src="img/work_5.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="openModal(this);" alt="Work 5" width="600" height="400">
             </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Every event is unique and one of a kind">
+            <div class="w3-col m4">
+                <img src="img/work_6.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="openModal(this);" alt="Work 6" width="600" height="400">
             </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Each client is special to us">
-            </div>
-        </div>
-
-        <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-                <img src="img/work_9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Our clients enjoy stress-free events">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_10.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We work to impress our clients">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="From weddings to parties, we do it all">
-            </div>
-
-            <div class="w3-col m3">
-                <img src="img/work_12.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Everyone loves our creative work">
-            </div>
-        </div>
-
-        <!-- Image Popup -->
-        <div id="imgPopup" class="w3-modal w3-padding-large">
-            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-black w3-large">&times;</span>
-            <img class="w3-modal-content" id="imgPopupImg" style="width:100%">
-            <div id="imgPopupCaption" class="w3-container w3-black w3-padding-16 w3-center"></div>
         </div>
     </div>
 
-    <!-- Third Parallax Image with Contact Us Text -->
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">Contact Us</span>
+    <!-- Image Modal -->
+    <div id="modal01" class="w3-modal w3-animate-opacity">
+        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="closeModal()">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom">
+            <img id="img01" style="width:100%">
+            <div id="caption"></div>
         </div>
     </div>
 
-    <!-- Container (Contact Section) -->
+    <!-- Contact Section -->
     <div class="w3-content w3-container w3-padding-64" id="contact">
         <h3 class="w3-center">CONTACT US</h3>
-        <p class="w3-center"><em>Get in touch and let’s plan your special day together!</em></p>
-
-        <form action="https://EliteEventsChicago.com/form-handler" method="post" target="_blank">
-            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                <div class="w3-half">
-                    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+        <p class="w3-center"><em>GET IN TOUCH</em></p>
+        <form action="https://EliteEventsChicago.com/form-handler" target="_blank">
+            <div class="w3-row">
+                <div class="w3-col m6">
+                    <input class="w3-input w3-border" type="text" placeholder="Name" required>
                 </div>
-                <div class="w3-half">
-                    <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                <div class="w3-col m6">
+                    <input class="w3-input w3-border" type="email" placeholder="Email" required>
                 </div>
             </div>
-            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-            <button class="w3-button w3-black w3-right w3-section" type="submit">
-                <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required>
+            <button class="w3-button w3-black w3-margin-top" type="submit">SEND MESSAGE</button>
         </form>
     </div>
 
@@ -194,21 +144,26 @@
     </footer>
 
     <script>
-        // Script to open the image popup
-        function onClick(element) {
-            document.getElementById("imgPopup").style.display = "block";
-            document.getElementById("imgPopupImg").src = element.src;
-            document.getElementById("imgPopupCaption").innerHTML = element.alt;
-        }
-
-        // Script to toggle the navbar on small screens
         function toggleFunction() {
             var x = document.getElementById("navSmall");
-            if (x.className === "w3-bar-block w3-dark-grey w3-hide") {
-                x.className = "w3-bar-block w3-dark-grey";
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
             } else {
-                x.className = "w3-bar-block w3-dark-grey w3-hide";
+                x.className = x.className.replace(" w3-show", "");
             }
+        }
+
+        function openModal(img) {
+            var modal = document.getElementById("modal01");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("modal01").style.display = "none";
         }
     </script>
 </body>
