@@ -11,11 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylistic.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        /* Custom cream white background color */
+        .w3-cream-white {
+            background-color: #f5f5dc; /* Cream white */
+            color: black; /* Adjust text color for contrast */
+        }
+    </style>
 </head>
 <body>
     <!--NAVBAR-->
     <div class="w3-top">
-        <div class="w3-bar w3-dark-grey" id="myNavbar">
+        <div class="w3-bar w3-cream-white" id="myNavbar">
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
@@ -32,7 +39,7 @@
             </div>
         </div>
         <!-- Navbar on small screens -->
-        <div id="navSmall" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-hide-medium">
+        <div id="navSmall" class="w3-bar-block w3-cream-white w3-hide w3-hide-large w3-hide-medium">
             <a href="#team" class="w3-bar-item w3-button">Team</a>
             <a href="#work" class="w3-bar-item w3-button">Work</a>
             <a href="#about" class="w3-bar-item w3-button">About</a>
@@ -45,7 +52,7 @@
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Elite Events <span class="w3-hide-small">Chicago</span></span>
+            <span class="w3-center w3-padding-large w3-cream-white w3-xlarge w3-wide w3-animate-opacity">Elite Events <span class="w3-hide-small">Chicago</span></span>
         </div>
     </div>
 
@@ -65,15 +72,15 @@
         <p class="w3-large w3-center w3-padding-16">Our stats from customers:</p>
         <p class="w3-wide"><i class="fa fa-diamond"></i> Creativity </p>
         <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
+            <div class="w3-container w3-padding-small w3-cream-white w3-center" style="width:100%">100%</div>
         </div>
         <p class="w3-wide"><i class="fa fa-cutlery"></i> Catering</p>
         <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+            <div class="w3-container w3-padding-small w3-cream-white w3-center" style="width:90%">90%</div>
         </div>
         <p class="w3-wide"><i class="fa fa-child"></i> Entertainment</p>
         <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+            <div class="w3-container w3-padding-small w3-cream-white w3-center" style="width:95%">95%</div>
         </div>
     </div>
 
@@ -112,38 +119,21 @@
     </div>
 
     <!-- Image Modal -->
-    <div id="modal01" class="w3-modal w3-animate-opacity">
-        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright" onclick="closeModal()">&times;</span>
-        <div class="w3-modal-content w3-animate-zoom">
-            <img id="img01" style="width:100%">
-            <div id="caption"></div>
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-xxlarge w3-black w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <div class="w3-content w3-container w3-padding-64" id="contact">
-        <h3 class="w3-center">CONTACT US</h3>
-        <p class="w3-center"><em>GET IN TOUCH</em></p>
-        <form action="https://EliteEventsChicago.com/form-handler" target="_blank">
-            <div class="w3-row">
-                <div class="w3-col m6">
-                    <input class="w3-input w3-border" type="text" placeholder="Name" required>
-                </div>
-                <div class="w3-col m6">
-                    <input class="w3-input w3-border" type="email" placeholder="Email" required>
-                </div>
-            </div>
-            <input class="w3-input w3-border" type="text" placeholder="Message" required>
-            <button class="w3-button w3-black w3-margin-top" type="submit">SEND MESSAGE</button>
-        </form>
-    </div>
-
     <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
+    <footer class="w3-center w3-cream-white w3-padding-64">
         <p>Powered by Elite Events Chicago</p>
     </footer>
 
     <script>
+        // Navbar toggle function
         function toggleFunction() {
             var x = document.getElementById("navSmall");
             if (x.className.indexOf("w3-show") == -1) {
@@ -151,19 +141,6 @@
             } else {
                 x.className = x.className.replace(" w3-show", "");
             }
-        }
-
-        function openModal(img) {
-            var modal = document.getElementById("modal01");
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-        }
-
-        function closeModal() {
-            document.getElementById("modal01").style.display = "none";
         }
     </script>
 </body>
