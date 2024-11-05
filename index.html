@@ -1,171 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Event Organization</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keywords" content="Marriage Proposals, Proposal Packages, Unique Experiences">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Your Brand Name offers unforgettable marriage proposal packages tailored to create unique experiences.">
+    <title>Your Brand Name - Proposal Packages</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Lobster|Satisfy|Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="stylistic.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
-        .mySlides {display:none;}
-        .w3-button {background-color: #f44336; color: white;}
-        .w3-button:hover {background-color: #d32f2f;}
         /* Add your custom styles here */
+        .bgimg-7 {
+            background-image: url('your-header-image.jpg'); /* Replace with your image */
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32">
-    <h1><b>Your Event Organization</b></h1>
-    <p>Creating Unforgettable Moments</p>
-</header>
-
-<!-- Navigation -->
-<nav class="w3-bar w3-border w3-light-grey">
-    <a href="#about" class="w3-bar-item w3-button">About Us</a>
-    <a href="#services" class="w3-bar-item w3-button">Services</a>
-    <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-</nav>
-
-<!-- About Section -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">ABOUT US</h3>
-    <p class="w3-center"><em>Your unforgettable proposal starts here.</em></p>
-    <p>Welcome to [Your Brand Name] — your ultimate destination for unforgettable marriage proposals. We specialize in crafting unique, personalized proposal experiences that capture the love and commitment you share. From intimate private moments to grand, picture-perfect settings, we take care of every detail, ensuring a seamless, memorable experience that reflects your story.</p>
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-dark-grey" id="myNavbar">
+        <a class="w3-bar-item w3-button" href="index.html"><i class="fa fa-home w3-margin-right"></i><b>Your Brand Name</b></a>
+        <a href="#packages" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-heart"></i> Packages</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-envelope"></i> Contact</a>
+    </div>
 </div>
 
-<!-- Services Section -->
-<div class="w3-content w3-container w3-padding-64" id="services">
-    <h3 class="w3-center">PROPOSAL PACKAGES</h3>
-    <p class="w3-center"><em>UNFORGETTABLE MOMENTS</em></p>
-
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col m4">
-            <h4>The Classic Romance Package</h4>
-            <p>Perfect for couples who cherish timeless romance. We create a sophisticated setting with flowers, candlelight, and a carefully chosen venue.</p>
-            <p><strong>Details:</strong></p>
-            <ul>
-                <li>Venue selection: Parks, Beaches, Rooftops</li>
-                <li>Customized décor: Candles, Flowers, String Lights</li>
-                <li>Photographer/Videographer</li>
-                <li>Coordination of all logistics</li>
-            </ul>
-        </div>
-        <div class="w3-col m4">
-            <h4>Adventure Awaits Package</h4>
-            <p>Add a thrilling twist to your proposal with unique outdoor settings that create unforgettable memories.</p>
-            <p><strong>Details:</strong></p>
-            <ul>
-                <li>Unique venues: Scenic Mountain Tops, Private Boats</li>
-                <li>Adventure options: Hot-Air Balloon, Helicopter Rides</li>
-                <li>Professional Photography and Videography</li>
-                <li>Personalized Keepsake and Proposal Planning</li>
-            </ul>
-        </div>
-        <div class="w3-col m4">
-            <h4>Private and Intimate Package</h4>
-            <p>For couples prioritizing privacy, this package offers secluded settings to cherish your moment.</p>
-            <p><strong>Details:</strong></p>
-            <ul>
-                <li>Private locations: Secluded Beaches, Private Gardens</li>
-                <li>Elegant Personal Décor</li>
-                <li>Discreet Photography or Videography</li>
-                <li>Personalized Touches: Favorite Music, Shared Memories</li>
-            </ul>
-        </div>
+<!-- Header Image -->
+<div class="bgimg-7 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Proposal Packages</span>
     </div>
-
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col m4">
-            <h4>The Grand Gesture Package</h4>
-            <p>Designed to wow with luxurious venues and spectacular elements that make your proposal unforgettable.</p>
-            <p><strong>Details:</strong></p>
-            <ul>
-                <li>Exclusive venues: Luxury Hotels, Historic Sites</li>
-                <li>Custom Décor and Lighting</li>
-                <li>Live Entertainment: Musicians, Dancers, Fireworks</li>
-                <li>Full Event Coordination</li>
-            </ul>
-        </div>
-        <div class="w3-col m4">
-            <h4>Destination Proposal Package</h4>
-            <p>For those dreaming of a special destination proposal, this package ensures a seamless experience at beautiful locations.</p>
-            <p><strong>Details:</strong></p>
-            <ul>
-                <li>Travel Planning: Beautiful Cities, Beaches, Mountain Vistas</li>
-                <li>Location Scouting and Local Coordination</li>
-                <li>Unique Destination Décor</li>
-                <li>Multi-Day Photographer/Videographer Options</li>
-            </ul>
-        </div>
-        <div class="w3-col m4">
-            <h4>Custom Proposal Package</h4>
-            <p>Craft a completely unique proposal that reflects your love story and favorite memories.</p>
-            <p><strong>Details:</strong></p>
-            <ul>
-                <li>One-on-One Consultation with Proposal Planner</li>
-                <li>Full Customization of Location and Décor</li>
-                <li>Personalized Proposal Script and Coordination</li>
-                <li>On-Site Assistance</li>
-            </ul>
-        </div>
-    </div>
-
-    <p class="w3-center w3-padding-32">Why Choose Us? We bring your vision to life with a creative, stress-free approach, offering you expert guidance and a highly personal experience. Our attention to detail ensures you and your partner feel every bit of the magic of this unforgettable day.</p>
-    <p class="w3-center"><strong>Let Us Make Your Proposal Perfect!</strong></p>
 </div>
 
-<!-- Portfolio Section -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <h3 class="w3-center">OUR WORK</h3>
-    <p class="w3-center"><em>Glimpses of Love</em></p>
+<!-- Proposal Packages Section -->
+<div class="w3-container" id="packages">
+    <h1>Our Proposal Packages</h1>
 
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col m4">
-            <img src="image1.jpg" style="width:100%" class="w3-hover-opacity" alt="Proposal at the beach">
-            <p><strong>Beach Proposal</strong></p>
-        </div>
-        <div class="w3-col m4">
-            <img src="image2.jpg" style="width:100%" class="w3-hover-opacity" alt="Rooftop Proposal">
-            <p><strong>Rooftop Proposal</strong></p>
-        </div>
-        <div class="w3-col m4">
-            <img src="image3.jpg" style="width:100%" class="w3-hover-opacity" alt="Destination Proposal">
-            <p><strong>Destination Proposal</strong></p>
-        </div>
+    <!-- Classic Romance Package -->
+    <div class="w3-card-4 w3-margin">
+        <h2>The Classic Romance Package</h2>
+        <p><b>Description:</b> Perfect for couples who cherish timeless romance, this package blends elegance with intimacy.</p>
+        <p><b>Details:</b></p>
+        <ul>
+            <li>Venue selection (parks, beaches, or rooftop settings)</li>
+            <li>Customized décor (candles, flowers, string lights)</li>
+            <li>Photographer/videographer</li>
+            <li>Coordination of all logistics</li>
+        </ul>
+    </div>
+
+    <!-- Adventure Awaits Package -->
+    <div class="w3-card-4 w3-margin">
+        <h2>Adventure Awaits Package</h2>
+        <p><b>Description:</b> For couples who love exploring, this package adds a thrilling twist to your proposal.</p>
+        <p><b>Details:</b></p>
+        <ul>
+            <li>Unique outdoor venues (mountains, lakes, etc.)</li>
+            <li>Adventure-based options (boat rentals, hot-air balloon rides)</li>
+            <li>Professional photography and videography</li>
+            <li>Personalized keepsake and proposal planning</li>
+        </ul>
+    </div>
+
+    <!-- Private and Intimate Package -->
+    <div class="w3-card-4 w3-margin">
+        <h2>Private and Intimate Package</h2>
+        <p><b>Description:</b> This package ensures a moment of pure romance in a secluded, meaningful setting.</p>
+        <p><b>Details:</b></p>
+        <ul>
+            <li>Private locations (secluded beach, private garden)</li>
+            <li>Elegant, personal décor</li>
+            <li>Discreet photography or videography</li>
+            <li>Personalized touches (favorite music, shared memories)</li>
+        </ul>
+    </div>
+
+    <!-- The Grand Gesture Package -->
+    <div class="w3-card-4 w3-margin">
+        <h2>The Grand Gesture Package</h2>
+        <p><b>Description:</b> Designed to wow, this package pulls out all the stops for an unforgettable proposal.</p>
+        <p><b>Details:</b></p>
+        <ul>
+            <li>Exclusive venue rental (luxury hotel, historic site)</li>
+            <li>Custom décor and lighting</li>
+            <li>Live entertainment (musicians, fireworks)</li>
+            <li>Full event coordination and media coverage</li>
+        </ul>
+    </div>
+
+    <!-- Destination Proposal Package -->
+    <div class="w3-card-4 w3-margin">
+        <h2>Destination Proposal Package</h2>
+        <p><b>Description:</b> Ideal for couples who dream of proposing in a special destination.</p>
+        <p><b>Details:</b></p>
+        <ul>
+            <li>Travel planning assistance and accommodation</li>
+            <li>Location scouting and local coordination</li>
+            <li>Unique destination décor and setup</li>
+            <li>Multi-day photographer/videographer options</li>
+        </ul>
+    </div>
+
+    <!-- Custom Proposal Package -->
+    <div class="w3-card-4 w3-margin">
+        <h2>Custom Proposal Package</h2>
+        <p><b>Description:</b> This package allows for a fully personalized proposal incorporating your love story.</p>
+        <p><b>Details:</b></p>
+        <ul>
+            <li>One-on-one consultation with a proposal planner</li>
+            <li>Full customization of location, décor, and ambiance</li>
+            <li>Personalized proposal script and coordination</li>
+            <li>On-site assistance and coordination</li>
+        </ul>
     </div>
 </div>
 
 <!-- Contact Section -->
-<div class="w3-container w3-padding-64" id="contact">
-    <h3 class="w3-center">CONTACT US</h3>
-    <p class="w3-center"><em>We would love to hear from you!</em></p>
-
-    <form action="/submit" method="post" class="w3-container">
-        <div class="w3-row-padding">
-            <div class="w3-col m6">
-                <label>Name</label>
-                <input class="w3-input" type="text" name="name" required>
-            </div>
-            <div class="w3-col m6">
-                <label>Email</label>
-                <input class="w3-input" type="email" name="email" required>
-            </div>
-        </div>
-        <label>Message</label>
-        <textarea class="w3-input" name="message" required></textarea>
-        <button class="w3-button w3-red w3-margin-top">Send Message</button>
-    </form>
+<div class="w3-container" id="contact">
+    <h2>Contact Us</h2>
+    <p>Let us make your proposal perfect! <br> Get in touch to start planning your unforgettable moment.</p>
+    <button class="w3-button w3-dark-grey" onclick="location.href='contact.html';">Contact Us</button>
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-center">
-    <p>© 2024 Your Event Organization | <a href="#contact" class="w3-hover-text-red">Contact Us</a></p>
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-center">
+    <p>© 2024 Your Brand Name | <a href="#contact" class="w3-hover-text-red">Contact Us</a></p>
 </footer>
 
-<!-- JavaScript (optional) -->
 <script>
-    // You can add JavaScript here for additional functionality if needed
+    // Additional JavaScript functionality can be added here
 </script>
-
 </body>
 </html>
