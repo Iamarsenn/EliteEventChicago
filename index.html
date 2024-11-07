@@ -108,15 +108,29 @@
                 </div>
             </div>
             <input class="w3-input w3-border" type="text" placeholder="Message" required>
+
+            <!-- Budget Question -->
+            <label class="w3-margin-top">What is your budget?</label>
+            <select class="w3-input w3-border" required>
+                <option value="6000">$6,000</option>
+                <option value="6-8k">$6,000 - $8,000</option>
+                <option value="8-10k">$8,000 - $10,000</option>
+                <option value="10-12k">$10,000 - $12,000</option>
+            </select>
+
+            <!-- Event Date Question -->
+            <label class="w3-margin-top">When is the event date?</label>
+            <input class="w3-input w3-border" type="date" required>
+
+            <!-- Location Question -->
+            <label class="w3-margin-top">What is the location you want it to be?</label>
+            <input class="w3-input w3-border" type="text" placeholder="Enter desired location" required>
+
             <button class="w3-button w3-black w3-margin-top" type="submit">SEND MESSAGE</button>
         </form>
     </div>
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-        <p>Powered by Elite Events Chicago</p>
-    </footer>
-
+    <!-- JavaScript for Toggle Navigation Menu -->
     <script>
         function toggleFunction() {
             var x = document.getElementById("navSmall");
@@ -127,10 +141,9 @@
             }
         }
 
-        function openModal(img) {
-            var modal = document.getElementById("imgModal");
-            document.getElementById("img01").src = img.src;
-            modal.style.display = "block";
+        function openModal(element) {
+            document.getElementById("imgModal").style.display = "block";
+            document.getElementById("img01").src = element.src;
         }
 
         function closeModal() {
