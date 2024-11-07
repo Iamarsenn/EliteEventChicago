@@ -26,8 +26,8 @@
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-button" title="Services"><i class="fa fa-globe"></i> Services <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                    <a href="venues_merseyside.html" class="w3-bar-item w3-button">Merseyside</a>
-                    <a href="venues_north_wales.html" class="w3-bar-item w3-button">North Wales</a>
+                    <a href="venues_merseyside.html" class="w3-bar-item w3-button">The Classic Package</a>
+                    <a href="venues_north_wales.html" class="w3-bar-item w3-button">Romantic Package</a>
                 </div>
             </div>
         </div>
@@ -94,48 +94,56 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <div class="w3-content w3-container w3-padding-64" id="contact">
-        <h3 class="w3-center">CONTACT US</h3>
-        <p class="w3-center"><em>GET IN TOUCH</em></p>
-        <form action="https://EliteEventsChicago.com/form-handler" target="_blank">
-            <div class="w3-row">
-                <div class="w3-col m6">
-                    <input class="w3-input w3-border" type="text" placeholder="Name" required>
-                </div>
-                <div class="w3-col m6">
-                    <input class="w3-input w3-border" type="email" placeholder="Email" required>
-                </div>
-            </div>
-            <input class="w3-input w3-border" type="text" placeholder="Message" required>
-            <button class="w3-button w3-black w3-margin-top" type="submit">SEND MESSAGE</button>
-        </form>
-    </div>
+   <!-- Contact Section -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">CONTACT US</h3>
+    <p class="w3-center"><em>GET IN TOUCH</em></p>
+    <form action="https://formspree.io/f/xdkogden" method="POST" target="_blank" class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" class="w3-input rounded-input" type="text" name="name" placeholder="Name" required>
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-        <p>Powered by Elite Events Chicago</p>
-    </footer>
+        <label for="email">Email</label>
+        <input id="email" class="w3-input rounded-input" type="email" name="email" placeholder="Email" required>
 
-    <script>
-        function toggleFunction() {
-            var x = document.getElementById("navSmall");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
+        <label for="message">Message</label>
+        <textarea id="message" class="w3-input rounded-input" name="message" placeholder="Your Message" required></textarea>
+
+        <label for="budget">What is your budget?</label>
+        <select id="budget" name="budget" class="rounded-input" required>
+            <option value="6000">$6,000</option>
+            <option value="6-8k">$6,000 - $8,000</option>
+            <option value="8-10k">$8,000 - $10,000</option>
+            <option value="10-12k">$10,000 - $12,000</option>
+        </select>
+
+        <label for="event-date">When is the event date?</label>
+        <input id="event-date" class="rounded-input" type="date" name="event-date" required>
+
+        <label for="location">What is the location you want it to be?</label>
+        <input id="location" class="rounded-input" type="text" name="location" placeholder="Enter desired location" required>
+        
+        <button type="submit" class="w3-button w3-green">SEND MESSAGE</button>
+    </form>
+</div>
+
+<script>
+    function toggleFunction() {
+        var x = document.getElementById("navSmall");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
         }
+    }
 
-        function openModal(img) {
-            var modal = document.getElementById("imgModal");
-            document.getElementById("img01").src = img.src;
-            modal.style.display = "block";
-        }
+    function openModal(element) {
+        document.getElementById("imgModal").style.display = "block";
+        document.getElementById("img01").src = element.src;
+    }
 
-        function closeModal() {
-            document.getElementById("imgModal").style.display = "none";
-        }
-    </script>
+    function closeModal() {
+        document.getElementById("imgModal").style.display = "none";
+    }
+</script>
 </body>
 </html>
