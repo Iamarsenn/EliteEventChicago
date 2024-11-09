@@ -6,6 +6,7 @@ body, html {
     color: #777;
     line-height: 1.8;
 }
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
     background-attachment: fixed;
@@ -32,34 +33,37 @@ body, html {
      min-height: 400px;
 }
 
-/* ffourth image (Contact, replacing bgimg-3)*/
+/* Fourth image (Contact, replacing bgimg-3) */
 .bgimg-4 {
 	background-image: url("img/bg_beach.jpg");
     min-height: 400px;
 }
 
-/* fifth image (Merseyside, Full height)*/
+/* Fifth image (Merseyside, Full height) */
 .bgimg-5 {
 	background-image: url("img/mersey1.jpg");
     min-height: 100%;
 }
 
-/* sixth image (Cheshire,Full height)*/
+/* Sixth image (Cheshire, Full height) */
 .bgimg-6 {
 	background-image: url("img/cheshire.jpg");
     min-height: 100%;
 }
-/* seventh image (North Wales,Full height)*/
+
+/* Seventh image (North Wales, Full height) */
 .bgimg-7 {
 	background-image: url("img/north_wales.jpg");
     min-height: 100%;
 }
-/* eighth image (login) */
+
+/* Eighth image (login) */
 .bgimg-8 {
     background-image: url("img/KKHeader2.jpg");
     min-height: 100%;
 }
-/* ninth image (signup) */
+
+/* Ninth image (signup) */
 .bgimg-9 {
     background-image: url("img/mrmrs.jpg");
     min-height: 100%;
@@ -67,13 +71,14 @@ body, html {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
+
 /* Add animation to "page content" */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 1s
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes animatebottom {
@@ -97,7 +102,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  position: centre;
+  position: center;
   margin: auto;
 }
 
@@ -178,32 +183,39 @@ img {vertical-align: middle;}
 .w3-container:hover .middle {
   opacity: 1;
 }
+
 .poptext {
   background-color: #4CAF50;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
 }
+
 .column {
     float: left;
     width: 50%;
     padding: 5px;
 }
+
 /* Clearfix (clear floats) */
 .row::after {
     content: "";
     clear: both;
     display: table;
 }
+
 .font-lobster {
     font-family: "Lobster", serif;
 }
+
 .font-satisfy {
 	font-family: 'Satisfy', cursive;
 }
+
 .font-courgette {
 	font-family: 'Courgette', cursive;
 }
+
 @-webkit-keyframes fade {
   from {opacity: .2} 
   to {opacity: 1}
@@ -213,22 +225,26 @@ img {vertical-align: middle;}
   from {opacity: .4} 
   to {opacity: 1}
 }
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9{
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
         background-attachment: scroll;
     }
 }
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .text {font-size: 11px;}
 }
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 500px) {
     .column {
         width: 100%;
     }
 }
+
 /* Form Styling */
 .contact-form {
     max-width: 600px;
@@ -268,8 +284,54 @@ img {vertical-align: middle;}
     background-color: #45a049;
 }
 
+/* Flexbox for W3-row */
 .w3-row {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+/* Mobile-friendly tweaks */
+@media screen and (max-width: 768px) {
+  /* Adjust font sizes */
+  body {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .w3-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  /* Slideshow images should be responsive */
+  .mySlides img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Smaller Screens */
+@media screen and (max-width: 480px) {
+  /* Adjust button sizes for touch screens */
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="date"],
+  .contact-form select,
+  .contact-form button {
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .contact-form button {
+    font-size: 18px;
+  }
 }
