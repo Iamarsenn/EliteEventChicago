@@ -90,27 +90,34 @@ body, html {
     width: 100%;
 }
 
-/* Contact Section Layout */
+/* Flexbox Layout for Contact Section */
 .w3-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.contact-form {
-  order: 1;
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Adjusting the form and contact text order */
+.contact-form-container {
+  order: 1; /* Ensures form comes first */
 }
 
-.w3-container {
-  order: 2;
-  flex: 1;
-  padding: 20px;
-  text-align: center;
+.contact-info-container {
+  order: 2; /* Ensures text comes second */
 }
+
+/* Responsive design - stack elements vertically on smaller screens */
+@media screen and (max-width: 768px) {
+  .w3-row {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .contact-form-container, .contact-info-container {
+    max-width: 100%;
+    order: unset; /* Reset the order */
+  }
+}
+
 
 /* Media Queries for Smaller Screens */
 @media screen and (max-width: 768px) {
