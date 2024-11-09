@@ -15,43 +15,250 @@ body, html {
     background-size: cover;
 }
 
-/* Various background images */
-.bgimg-1 { background-image: url("img/KKwalk.jpg"); min-height: 100%; }
-.bgimg-2 { background-image: url("img/celebration_couple.jpg"); min-height: 400px; }
-.bgimg-3 { background-image: url("/img/bg_beach.jpg"); min-height: 400px; }
-.bgimg-4 { background-image: url("img/bg_beach.jpg"); min-height: 400px; }
-.bgimg-5 { background-image: url("img/mersey1.jpg"); min-height: 100%; }
-.bgimg-6 { background-image: url("img/cheshire.jpg"); min-height: 100%; }
-.bgimg-7 { background-image: url("img/north_wales.jpg"); min-height: 100%; }
-.bgimg-8 { background-image: url("img/KKHeader2.jpg"); min-height: 100%; }
-.bgimg-9 { background-image: url("img/mrmrs.jpg"); min-height: 100%; }
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("img/KKwalk.jpg");
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("img/celebration_couple.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) does not display anything. */
+.bgimg-3 {
+	 background-image: url("/img/bg_beach.jpg");
+     min-height: 400px;
+}
+
+/* Fourth image (Contact, replacing bgimg-3) */
+.bgimg-4 {
+	background-image: url("img/bg_beach.jpg");
+    min-height: 400px;
+}
+
+/* Fifth image (Merseyside, Full height) */
+.bgimg-5 {
+	background-image: url("img/mersey1.jpg");
+    min-height: 100%;
+}
+
+/* Sixth image (Cheshire, Full height) */
+.bgimg-6 {
+	background-image: url("img/cheshire.jpg");
+    min-height: 100%;
+}
+
+/* Seventh image (North Wales, Full height) */
+.bgimg-7 {
+	background-image: url("img/north_wales.jpg");
+    min-height: 100%;
+}
+
+/* Eighth image (login) */
+.bgimg-8 {
+    background-image: url("img/KKHeader2.jpg");
+    min-height: 100%;
+}
+
+/* Ninth image (signup) */
+.bgimg-9 {
+    background-image: url("img/mrmrs.jpg");
+    min-height: 100%;
+}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
-/* Form Layout */
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: center;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.mySlides {
+	display:none;
+}
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.w3-container:hover .image {
+  opacity: 0.75;
+}
+
+.w3-container:hover .middle {
+  opacity: 1;
+}
+
+.poptext {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.font-lobster {
+    font-family: "Lobster", serif;
+}
+
+.font-satisfy {
+	font-family: 'Satisfy', cursive;
+}
+
+.font-courgette {
+	font-family: 'Courgette', cursive;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
+        background-attachment: scroll;
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px;}
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+
+    /* Centering "Our Work" text on mobile */
+    .our-work-section {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Form Styling */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly darker background for better contrast */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form .form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.contact-form label {
-    flex: 1;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    display: block;
-    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
 }
 
 .contact-form input[type="text"],
@@ -59,16 +266,16 @@ body, html {
 .contact-form input[type="date"],
 .contact-form textarea,
 .contact-form button {
-    flex: 2;
     width: 100%;
     padding: 12px;
+    margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
 
 .contact-form textarea {
-    resize: vertical;
+    resize: vertical; /* Allows users to resize the textarea */
 }
 
 .contact-form button {
@@ -83,60 +290,7 @@ body, html {
     background-color: #45a049;
 }
 
-.contact-form .form-row input[type="text"],
-.contact-form .form-row input[type="email"],
-.contact-form .form-row input[type="date"],
-.contact-form .form-row textarea {
-    width: 100%;
-}
-
-/* Flexbox Layout for Contact Section */
-.w3-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/* Adjusting the form and contact text order */
-.contact-form-container {
-  order: 1; /* Ensures form comes first */
-}
-
-.contact-info-container {
-  order: 2; /* Ensures text comes second */
-}
-
-/* Responsive design - stack elements vertically on smaller screens */
-@media screen and (max-width: 768px) {
-  .w3-row {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-  }
-
-  .contact-form-container, .contact-info-container {
-    max-width: 100%;
-    order: unset; /* Reset the order */
-  }
-}
-
-
-/* Media Queries for Smaller Screens */
-@media screen and (max-width: 768px) {
-  .contact-form {
-    order: 1;
-    width: 100%;
-  }
-
-  .w3-container {
-    order: 2;
-    width: 100%;
-  }
-
-  .w3-row {
-    flex-direction: column; /* Stack vertically on smaller screens */
-  }
-}
-
-/* General Styles for Labels and Buttons */
+/* Form labels */
 .contact-form label {
     font-size: 16px;
     font-weight: bold;
@@ -145,14 +299,13 @@ body, html {
     margin-top: 20px;
 }
 
-.contact-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #45a049;
+/* Adjustments for mobile */
+@media screen and (max-width: 768px) {
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="date"],
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 18px;
+    }
 }
