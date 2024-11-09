@@ -1,161 +1,137 @@
-@charset "ISO-8859-1";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centered Contact Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Lobster|Satisfy|Courgette">
+<style>
+    /* General Body and HTML Styling */
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato", sans-serif;
-}
-
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-
-/* Parallax Effect for Background Images */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Background Images */
-.bgimg-1 { background-image: url("img/KKwalk.jpg"); min-height: 100%; }
-.bgimg-2 { background-image: url("img/celebration_couple.jpg"); min-height: 400px; }
-.bgimg-3, .bgimg-4 { background-image: url("img/bg_beach.jpg"); min-height: 400px; }
-.bgimg-5 { background-image: url("img/mersey1.jpg"); min-height: 100%; }
-.bgimg-6 { background-image: url("img/cheshire.jpg"); min-height: 100%; }
-.bgimg-7 { background-image: url("img/north_wales.jpg"); min-height: 100%; }
-.bgimg-8 { background-image: url("img/KKHeader2.jpg"); min-height: 100%; }
-.bgimg-9 { background-image: url("img/mrmrs.jpg"); min-height: 100%; }
-
-.w3-wide { letter-spacing: 10px; }
-.w3-hover-opacity { cursor: pointer; }
-
-/* Animation */
-.animate-bottom {
-    position: relative;
-    animation: animatebottom 1s;
-}
-
-@keyframes animatebottom {
-    from { bottom: -100px; opacity: 0; }
-    to { bottom: 0; opacity: 1; }
-}
-
-#myDiv {
-    display: none;
-    text-align: center;
-}
-
-* { box-sizing: border-box; }
-body { font-family: Verdana, sans-serif; }
-.mySlides { display: none; }
-img { vertical-align: middle; }
-
-/* Slideshow */
-.slideshow-container { position: center; margin: auto; }
-.text { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: 100%; text-align: center; }
-.numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }
-.dot { height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
-.active { background-color: #717171; }
-
-/* Fading Animation for Slides */
-.fade { animation: fade 1.5s; }
-
-@keyframes fade {
-    from { opacity: 0.2; }
-    to { opacity: 1; }
-}
-
-/* Responsive Columns */
-.column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Fonts */
-.font-lobster { font-family: "Lobster", serif; }
-.font-satisfy { font-family: 'Satisfy', cursive; }
-.font-courgette { font-family: 'Courgette', cursive; }
-
-/* Contact Form Styling */
-.contact-form {
-    max-width: 600px !important;
-    margin: 0 auto !important;
-    /* other styles */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="date"],
-.contact-form textarea,
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form textarea { resize: vertical; }
-
-.contact-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover { background-color: #45a049; }
-
-.contact-form label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    display: block;
-    margin-top: 20px;
-}
-
-/* Responsive Adjustments */
-@media only screen and (max-device-width: 1024px) {
+    /* Parallax Background Images */
     .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
-        background-attachment: scroll;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
 
-@media only screen and (max-width: 300px) {
-    .text { font-size: 11px; }
-}
+    /* Specific Background Images */
+    .bgimg-1 { background-image: url("img/KKwalk.jpg"); min-height: 100%; }
+    .bgimg-2 { background-image: url("img/celebration_couple.jpg"); min-height: 400px; }
+    .bgimg-3 { background-image: url("img/bg_beach.jpg"); min-height: 400px; }
+    .bgimg-4 { background-image: url("img/bg_beach.jpg"); min-height: 400px; }
+    .bgimg-5 { background-image: url("img/mersey1.jpg"); min-height: 100%; }
+    .bgimg-6 { background-image: url("img/cheshire.jpg"); min-height: 100%; }
+    .bgimg-7 { background-image: url("img/north_wales.jpg"); min-height: 100%; }
+    .bgimg-8 { background-image: url("img/KKHeader2.jpg"); min-height: 100%; }
+    .bgimg-9 { background-image: url("img/mrmrs.jpg"); min-height: 100%; }
 
-@media screen and (max-width: 500px) {
-    .column {
+    /* Contact Form Styling */
+    .contact-form {
+        max-width: 600px;
         width: 100%;
-    }
-    .our-work-section {
-        text-align: center;
         padding: 20px;
+        margin-bottom: 30px; /* Space beneath the form for other content */
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-}
 
-@media screen and (max-width: 768px) {
+    /* Form Element Styling */
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form input[type="date"],
     .contact-form textarea,
     .contact-form button {
-        font-size: 18px;
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
     }
-}
+
+    .contact-form button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #45a049;
+    }
+
+    /* Form labels */
+    .contact-form label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-top: 20px;
+    }
+
+    /* Responsive Adjustments */
+    @media screen and (max-width: 768px) {
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="date"],
+        .contact-form textarea,
+        .contact-form button {
+            font-size: 18px;
+        }
+    }
+
+    /* Parallax Scroll Fix for Mobile */
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
+            background-attachment: scroll;
+        }
+    }
+
+    /* Slideshow and Other Content Styles */
+    .mySlides { display: none; }
+    .slideshow-container { position: center; margin: auto; }
+    .dot { height: 15px; width: 15px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+    .active { background-color: #717171; }
+</style>
+</head>
+<body>
+
+<!-- Contact Form -->
+<div class="contact-form">
+    <form action="/submit_form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Additional Content (below form) -->
+<div class="additional-content">
+    <p>This content appears beneath the contact form.</p>
+</div>
+
+</body>
+</html>
