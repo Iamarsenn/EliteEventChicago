@@ -243,6 +243,12 @@ img {vertical-align: middle;}
     .column {
         width: 100%;
     }
+
+    /* Centering "Our Work" text on mobile */
+    .our-work-section {
+        text-align: center;
+        padding: 20px;
+    }
 }
 
 /* Form Styling */
@@ -291,8 +297,12 @@ img {vertical-align: middle;}
     flex-wrap: wrap;
 }
 
-/* Mobile-friendly tweaks */
+/* Purple background for navigation menu on mobile */
 @media screen and (max-width: 768px) {
+  .w3-navbar {
+    background-color: #800080; /* Purple background */
+  }
+
   /* Adjust font sizes */
   body {
     font-size: 14px;
