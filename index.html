@@ -131,46 +131,50 @@
 <!-- Contact Section -->
 <div class="contact-section">
     <h2 class="contact-title">Let's Start Planning Your Event</h2>
-    <form action="https://formspree.io/f/xdkogden" method="POST" class="contact-form">
-        <div class="form-field">
-            <label for="name">Name</label>
-            <input id="name" type="text" name="name" placeholder="Enter your name" required>
+    
+    <!-- Flex container for the left and right columns -->
+    <div class="w3-row">
+        <!-- Left Column: Contact Form -->
+        <div class="w3-col" style="flex: 1; max-width: 48%;">
+            <form action="https://formspree.io/f/xdkogden" method="POST" class="contact-form">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="budget">What is your budget?</label>
+                    <select id="budget" name="budget" required>
+                        <option value="6000">$6,000</option>
+                        <option value="6-8k">$6,000 - $8,000</option>
+                        <option value="8-10k">$8,000 - $10,000</option>
+                        <option value="10-12k">$10,000 - $12,000</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="event-date">When is the event date?</label>
+                    <input id="event-date" type="date" name="event-date" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="location">Where will the event take place?</label>
+                    <input id="location" type="text" name="location" placeholder="Event location" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
-
-        <div class="form-field">
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="Enter your email" required>
-        </div>
-
-        <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your message" required></textarea>
-        </div>
-
-        <div class="form-field">
-            <label for="budget">What is your budget?</label>
-            <select id="budget" name="budget" required>
-                <option value="6000">$6,000</option>
-                <option value="6-8k">$6,000 - $8,000</option>
-                <option value="8-10k">$8,000 - $10,000</option>
-                <option value="10-12k">$10,000 - $12,000</option>
-            </select>
-        </div>
-
-        <div class="form-field">
-            <label for="event-date">When is the event date?</label>
-            <input id="event-date" type="date" name="event-date" required>
-        </div>
-
-        <div class="form-field">
-            <label for="location">Where will the event take place?</label>
-            <input id="location" type="text" name="location" placeholder="Event location" required>
-        </div>
-
-        <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-</div>
-
 
         <!-- Right Column: Contact Information -->
         <div class="w3-col" style="flex: 1; max-width: 48%;">
