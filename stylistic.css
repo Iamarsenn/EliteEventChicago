@@ -17,6 +17,21 @@
         flex-direction: column;
     }
 
+    /* Proposal Banner Styling */
+    .proposal-banner {
+        width: 100%;
+        padding: 50px 20px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+        color: white;
+        font-size: 36px;
+        font-family: 'Lobster', cursive;
+    }
+
+    .proposal-banner h1 {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
     /* Parallax Background Images */
     .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9 {
         background-attachment: fixed;
@@ -108,6 +123,11 @@
 </style>
 </head>
 <body>
+
+<!-- Proposal Banner -->
+<div class="proposal-banner">
+    <h1>Book Your Proposal Now</h1>
+</div>
 
 <!-- Contact Form -->
 <div class="contact-form">
