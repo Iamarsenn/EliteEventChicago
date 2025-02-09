@@ -28,8 +28,14 @@
         font-family: 'Lobster', cursive;
     }
 
-    .proposal-banner h1 {
-        .bgimg-2 { background-image: url("img/celebration_couple.jpg"); min-height: 400px; }
+    .proposal-banner {
+        width: 100%;
+        padding: 50px 20px;
+        text-align: center;
+        background: url("img/celebration_couple.jpg") center/cover no-repeat;
+        color: white;
+        font-size: 36px;
+        font-family: 'Lobster', cursive;
     }
 
     /* Parallax Background Images */
